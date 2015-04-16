@@ -1,6 +1,5 @@
-
-$accentColor: #7FA7B2;
-$hoverColor: lighten($accentColor, 5%);
+$accentColor: #96a46f;
+$hoverColor: darken($accentColor, 5%);
 $mainColor: #ffffff;
 
 
@@ -23,14 +22,12 @@ $mainColor: #ffffff;
 }
 
 #sfo-gifts-gadgets{
-	//border-top: 2px solid $mainColor;
 	box-sizing: border-box;
-	font-family: 'Open Sans';
+	text-rendering: optimizeLegibility;
+	font-family: 'Open Sans','Myriad Pro',Arial,sans-serif;
 	float: left;
 	margin-left: 30px;
 	max-width: 1170px;
-	//padding-top: 1em;
-	text-rendering: optimizeLegibility;
 	width: 100%;
 
 	@media only screen and(max-width: 1199px) {
@@ -54,13 +51,18 @@ $mainColor: #ffffff;
 		float: left;
 		padding-bottom: 1em;
 		width: percentage(233/1170);
+		position: relative;
+		height: 268px;
 
 		@media only screen and(max-width: 1199px) {
 			width: percentage(187/940);
+			height: 220px;
+
 		}
 
 		@media only screen and(max-width: 979px) {
 			width: percentage(180/724);
+			height: 211px
 		}
 
 		& + .sfo-article{
@@ -76,15 +78,33 @@ $mainColor: #ffffff;
 		}
 
 		p{
-			color: $mainColor;
-			font-family: Georgia;
-			font-style: italic;
-			font-weight: bold !important;
-			padding: 4em 2em 0;
+			color: $accentColor;
+			margin: 40px 0 0;
 			text-align: center;
+			font-style: italic;
+			text-transform: uppercase;
+			font-size: 30px;
+			line-height: 34px;
+			font-weight: 100;
+			transform: rotate(-7deg);
+
+			.all-gadgets-span {
+				font-size: 11px;
+				display: inline-block;
+				color: $mainColor;
+				background-color: $accentColor;
+				padding: 10px 15px;
+				text-transform: none;
+				margin-bottom: 7px; 
+				line-height: 7px;
+				font-style: normal;
+				float: none;
+				width: initial;
+				min-height: inherit;
+				 }
 
 			@media only screen and(max-width: 1199px) {
-				padding: 3em 2em 0;
+				margin: 30px 0;
 			}
 
 			@media only screen and(max-width: 979px) {
@@ -112,13 +132,16 @@ $mainColor: #ffffff;
 		text-decoration: none;
 		transition: background .2s ease-in-out, border .2s ease-in-out, color .2s ease-in-out;
 		width: 60%;
+		position: absolute;
+		bottom: 12px;
+		left: 0;
+		right: 0;
 
 		@media only screen and(max-width: 1199px) {
 			font-size: 11px;
 			padding: 0 8px;
-			position: relative;
-				top: 1px;
 		}
+
 
 		&:after{
 			content: "";
@@ -134,17 +157,23 @@ $mainColor: #ffffff;
 	}
 
 	.all-gadgets{
-		background: $accentColor;
+		background-color: $accentColor;
+		background: url("http://static.asadventure.com/includes/banner/special_flyout/150402-gifts-gadgets/images/background.jpg") no-repeat center center;
+		background-size: cover;
 		padding-bottom: 18px;
 
 		@media only screen and(max-width: 1199px) {
 			max-width: 187px;
+			height: 215px;
 		}
 
 		@media only screen and(max-width: 979px) {
 			height: 60px;
 			max-width: 100%;
 			width: 100%;
+			background: $accentColor;
+
+			p { display: none; }
 		}
 
 		.all-gadgets-filler{
@@ -158,7 +187,7 @@ $mainColor: #ffffff;
 
 			@media only screen and(max-width: 979px) {
 				float: left;
-				width: 54%;
+
 			}
 
 			hr{
@@ -183,14 +212,16 @@ $mainColor: #ffffff;
 			border: 2px solid $mainColor;
 			//box-sizing: border-box;
 			color: $mainColor;
-			height: 38px;
-			line-height: 38px;
+			height: 40px;
+			line-height: 40px;
 			width: 70%;
 
 			@media only screen and(max-width: 979px) {
 				float: left;
-				margin-top: 20px;
-				width: 42%;
+				margin-top: 16px;
+				width: 50%;
+				margin-left: 25%; 
+				bottom: 16px;
 			}
 
 			&:after{
